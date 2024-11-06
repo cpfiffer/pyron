@@ -44,7 +44,7 @@ Creates and activates a `.pyron` virtual environment in your current directory.
 1. Download the script:
 ```bash
 mkdir -p ~/.local/bin
-curl -o ~/.local/bin/pyron.sh https://raw.githubusercontent.com/YOUR_USERNAME/pyron/main/pyron.sh
+curl -o ~/.local/bin/pyron.sh https://raw.githubusercontent.com/cpfiffer/pyron/main/pyron.sh
 ```
 
 2. Add to your shell configuration:
@@ -62,7 +62,7 @@ source ~/.local/bin/pyron.sh
 ### Option 2: Using git
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pyron.git
+git clone https://github.com/cpfiffer/pyron.git
 cd pyron
 ./install.sh
 ```
