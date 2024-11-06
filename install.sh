@@ -7,12 +7,17 @@ set -e
 # Configuration
 INSTALL_DIR="$HOME/.local/bin"
 SCRIPT_NAME="pyron.sh"
+GITHUB_RAW="https://raw.githubusercontent.com/cpfiffer/pyron/main"
 
 # Create installation directory if it doesn't exist
 mkdir -p "$INSTALL_DIR"
 
-# Copy the script to the installation directory
-cp "$(dirname "$0")/$SCRIPT_NAME" "$INSTALL_DIR/$SCRIPT_NAME"
+# Download the script
+echo "Downloading pyron..."
+curl -fsSL "$GITHUB_RAW/pyron.sh" -o "$INSTALL_DIR/$SCRIPT_NAME" || {
+    echo "Error: Failed to download pyron.sh" >&2
+    exit 1
+}
 
 # Make the script executable
 chmod +x "$INSTALL_DIR/$SCRIPT_NAME"
