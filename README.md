@@ -2,27 +2,27 @@
 
 ```
 
-██╗     ███████╗███████╗███████╗                          
-██║     ██╔════╝██╔════╝██╔════╝                          
-██║     █████╗  ███████╗███████╗                          
-██║     ██╔══╝  ╚════██║╚════██║                          
-███████╗███████╗███████║███████║                          
-╚══════╝╚══════╝╚══════╝╚══════╝                          
-                                                          
-██╗  ██╗ █████╗ ████████╗███████╗███████╗██╗   ██╗██╗     
-██║  ██║██╔══██╗╚══██╔══╝██╔════╝██╔════╝██║   ██║██║     
-███████║███████║   ██║   █████╗  █████╗  ██║   ██║██║     
-██╔══██║██╔══██║   ██║   ██╔══╝  ██╔══╝  ██║   ██║██║     
+██╗     ███████╗███████╗███████╗
+██║     ██╔════╝██╔════╝██╔════╝
+██║     █████╗  ███████╗███████╗
+██║     ██╔══╝  ╚════██║╚════██║
+███████╗███████╗███████║███████║
+╚══════╝╚══════╝╚══════╝╚══════╝
+
+██╗  ██╗ █████╗ ████████╗███████╗███████╗██╗   ██╗██╗
+██║  ██║██╔══██╗╚══██╔══╝██╔════╝██╔════╝██║   ██║██║
+███████║███████║   ██║   █████╗  █████╗  ██║   ██║██║
+██╔══██║██╔══██║   ██║   ██╔══╝  ██╔══╝  ██║   ██║██║
 ██║  ██║██║  ██║   ██║   ███████╗██║     ╚██████╔╝███████╗
 ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝      ╚═════╝ ╚══════╝
-                                                          
-██████╗ ██╗██████╗                                        
-██╔══██╗██║██╔══██╗                                       
-██████╔╝██║██████╔╝                                       
-██╔═══╝ ██║██╔═══╝                                        
-██║     ██║██║                                            
-╚═╝     ╚═╝╚═╝                                            
-                                                          
+
+██████╗ ██╗██████╗
+██╔══██╗██║██╔══██╗
+██████╔╝██║██████╔╝
+██╔═══╝ ██║██╔═══╝
+██║     ██║██║
+╚═╝     ╚═╝╚═╝
+
 ```
 
 Manage virtual python environments with ease.
@@ -37,16 +37,24 @@ Creates and activates a `.pyron` virtual environment in your current directory.
 - Updates pip to latest version on environment creation
 - Provides clear feedback and error messages
 
-## Usage 
-
 ## Installation
 
-### Option 1: Manual Installation
+### Option 1: Direct install (recommended)
+```bash
+curl -o- https://raw.githubusercontent.com/cpfiffer/pyron/main/install.sh | bash
+```
+Or with wget:
+```bash
+wget -qO- https://raw.githubusercontent.com/cpfiffer/pyron/main/install.sh | bash
+```
+
+### Option 2: Manual Installation
 
 1. Download the script:
 ```bash
 mkdir -p ~/.local/bin
-curl -o ~/.local/bin/pyron.sh https://raw.githubusercontent.com/YOUR_USERNAME/pyron/main/pyron.sh
+curl -o ~/.local/bin/pyron.sh https://raw.githubusercontent.com/cpfiffer/pyron/main/pyron.sh
+chmod +x ~/.local/bin/pyron.sh
 ```
 
 2. Add to your shell configuration:
@@ -61,11 +69,12 @@ For bash (add to `~/.bashrc`):
 source ~/.local/bin/pyron.sh
 ```
 
-### Option 2: Using git
+### Option 3: Using git
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/pyron.git
+git clone https://github.com/cpfiffer/pyron.git
 cd pyron
+chmod +x install.sh
 ./install.sh
 ```
 
@@ -88,8 +97,16 @@ This will:
 ## Requirements
 
 - Python 3.7 or higher
-- bash or zsh shell
+- `bash` or `zsh` shell
 
 ## License
 
 MIT License - see LICENSE file for details
+
+## Security
+
+The install script will:
+- Create `~/.local/bin` if it doesn't exist
+- Copy `pyron.sh` to `~/.local/bin`
+- Add a source line to your `.zshrc` and/or `.bashrc`
+- No sudo privileges required
