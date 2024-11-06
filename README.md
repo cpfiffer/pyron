@@ -1,7 +1,6 @@
 # pyron
 
 ```
-
 ██╗     ███████╗███████╗███████╗
 ██║     ██╔════╝██╔════╝██╔════╝
 ██║     █████╗  ███████╗███████╗
@@ -22,7 +21,6 @@
 ██╔═══╝ ██║██╔═══╝
 ██║     ██║██║
 ╚═╝     ╚═╝╚═╝
-
 ```
 
 Manage virtual python environments with ease.
@@ -54,7 +52,10 @@ wget -qO- https://raw.githubusercontent.com/cpfiffer/pyron/main/install.sh | bas
 ```bash
 mkdir -p ~/.local/bin
 curl -o ~/.local/bin/pyron.sh https://raw.githubusercontent.com/cpfiffer/pyron/main/pyron.sh
+<<<<<<< HEAD
 chmod +x ~/.local/bin/pyron.sh
+=======
+>>>>>>> a5b05d7e379884ca44761da4a0241bc9c427aab9
 ```
 
 2. Add to your shell configuration:
